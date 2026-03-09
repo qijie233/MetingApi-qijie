@@ -10,6 +10,35 @@
 - 灵感源于 [https://api.fczbl.vip/163/](https://api.fczbl.vip/163/)
 - 部分参考 [Meting-API](https://github.com/metowolf/Meting-API)
 
+## 当前版本改动
+
+- 新增 `type=search`：使用 `id` 作为搜索关键词，返回与 `song/playlist` 一致的结构（`name/artist/url/pic/lrc`）
+- 新增音质参数 `br`（用于 `type=url`）：默认 `320`，可传如 `2000`（flac）、`192`、`128`
+- 新增封面分辨率参数 `cover`（用于 `type=pic`）：默认 `300`，并兼容旧参数 `size`
+- `song` / `playlist` / `search` 返回的子链接会透传本次请求中的 `br`、`cover`（仅在传入时透传）
+- 保持向后兼容：不传 `br`、`cover`（或 `size`）时，行为与旧版一致
+
+### 参数速览
+
+- `type=search` 相关：
+  - `id`: 搜索关键词
+  - `page`: 页码（可选，默认 `1`）
+  - `limit`: 条数（可选，默认 `30`）
+  - `search_type`: 平台搜索类型（可选，默认 `1`）
+- `type=url` 相关：
+  - `br`: 音质参数（可选，默认 `320`）
+- `type=pic` 相关：
+  - `cover`: 封面分辨率（可选，默认 `300`）
+  - `size`: 旧版兼容参数（效果等同于 `cover`）
+
+### 示例
+
+```text
+?type=search&id=周杰伦&limit=5
+?type=url&id=416892104&br=2000
+?type=pic&id=416892104&cover=500
+```
+
 ## Build Setup
 
 ```bash

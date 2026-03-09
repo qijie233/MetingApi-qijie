@@ -30,13 +30,19 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pic 封面<br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lrc 歌词<br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;song 单曲<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;search 搜索<br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;playlist 歌单<br /><br />
-    id: 类型ID（封面ID/单曲ID/歌单ID）<br />
+    id: 类型ID（封面ID/单曲ID/歌单ID）或搜索关键词（type=search）<br />
+    search 可选参数：page（页码，默认1）、limit（条数，默认30）、search_type（平台搜索类型，默认1）<br />
+    通用可选参数：br（音质参数，默认320，可选如2000/192/128）、cover（封面分辨率，默认300）；pic 同时兼容旧参数 size<br />
     <br />
     GitHub：<a href="https://github.com/injahow/meting-api" target="_blank">meting-api</a>，此API基于 <a href="https://github.com/metowolf/Meting" target="_blank">Meting</a> 构建。<br /><br />
     例如：<a href="<?php echo API_URI ?>?type=url&id=1969519579" target="_blank"><?php echo API_URI ?>?type=url&id=1969519579</a><br />
     <a href="<?php echo API_URI ?>?type=url&id=416892104" target="_blank" style="padding-left:48px"><?php echo API_URI ?>?type=url&id=416892104</a><br />
+    <a href="<?php echo API_URI ?>?type=url&id=416892104&br=2000" target="_blank" style="padding-left:48px"><?php echo API_URI ?>?type=url&id=416892104&br=2000</a><br />
+    <a href="<?php echo API_URI ?>?type=pic&id=416892104&cover=500" target="_blank" style="padding-left:48px"><?php echo API_URI ?>?type=pic&id=416892104&cover=500</a><br />
     <a href="<?php echo API_URI ?>?type=song&id=591321" target="_blank" style="padding-left:48px"><?php echo API_URI ?>?type=song&id=591321</a><br />
+    <a href="<?php echo API_URI ?>?type=search&id=%E5%91%A8%E6%9D%B0%E4%BC%A6&limit=5" target="_blank" style="padding-left:48px"><?php echo API_URI ?>?type=search&id=周杰伦&limit=5</a><br />
     <a href="<?php echo API_URI ?>?type=playlist&id=2619366284" target="_blank" style="padding-left:48px"><?php echo API_URI ?>?type=playlist&id=2619366284</a><br /><br />
     
     <br/> 
