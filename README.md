@@ -88,10 +88,10 @@ define('AUTH_SECRET', 'meting-secret');
 ## Demo
 
 API-Demo:
- https://api.qijieya.cn/meting/?type=url&id=1969519579
- https://api.qijieya.cn/meting/?type=url&id=416892104
- https://api.qijieya.cn/meting/?type=song&id=591321
- https://api.qijieya.cn/meting/?type=playlist&id=2619366284
+- https://api.qijieya.cn/meting/?type=url&id=1969519579
+- https://api.qijieya.cn/meting/?type=url&id=416892104
+- https://api.qijieya.cn/meting/?type=song&id=591321
+- https://api.qijieya.cn/meting/?type=playlist&id=2619366284
 
 ## Thanks
 - [injahow](https://github.com/injahow/meting-api)
